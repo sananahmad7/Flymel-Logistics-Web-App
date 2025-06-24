@@ -1,22 +1,31 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    const linkClasses = (path) =>
+        `text-3xl font-bold transition duration-200 ease-in-out ${currentPath === path
+            ? 'text-indigo-900 border-b-4 border-indigo-900 pb-1.5'
+            : 'text-indigo-900 hover:text-red-700'
+        }`;
+
     return (
-        <div className='flex  justify-between items-center bg-white border mx-15' >
-            <div className='border flex-row'>
-                <img className='h-30 w-45' src='src/assets/Logo.png' alt='idk' />
-                <img src='src/assets/Name.png' alt='idk' />
+        <div className='flex justify-between items-center bg-white border 3xl:mx-10 4xl:mx-15'>
+            <div className='flex items-center space-x-2'>
+                <img className='h-[40px] w-[55px]' src='src/assets/Logo.png' alt='logo' />
+                <img src='src/assets/Name.png' alt='name' />
             </div>
-            <div className='border p-10 space-x-10' >
-                <Link className='text-3xl font-bold text-indigo-800 hover:text-red-600 transition duration-200
-					 ease-in-out' to="/">Home</Link>
-                <Link className='text-3xl font-bold text-indigo-800 hover:text-red-600 transition duration-200' to="/global">Global Coverage</Link>
-                <Link className='text-3xl font-bold text-indigo-800 hover:text-red-600 transition duration-200' to="/about">About</Link>
-                <Link className='text-3xl font-bold text-indigo-800 hover:text-red-600 transition duration-200' to="/news">News</Link>
+
+            <div className='flex space-x-10 p-10'>
+                <Link className={linkClasses('/')} to="/">Home</Link>
+                <Link className={linkClasses('/global')} to="/global">Global Coverage</Link>
+                <Link className={linkClasses('/about')} to="/about">About</Link>
+                <Link className={linkClasses('/news')} to="/news">News</Link>
             </div>
         </div>
-    )
+    );
 }
 
-export default Header
+export default Header;
