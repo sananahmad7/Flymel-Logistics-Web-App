@@ -106,7 +106,7 @@ function HomePage() {
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                     </svg>
                 </button>
-                <div className='flex lg:flex-row sm:flex-col lg:bottom-[-190px] xl:bottom-[-150px]  justify-between absolute gap-5 py-10 rounded-2xl bottom-[-320px]  left-1/2   md:w-175 sm:w-160 lg:w-210 xl:w-265 2xl:w-320 3xl:w-440 4xl:w-490 transform -translate-x-1/2 bg-[#181834]'>
+                <div className='flex 2xl:flex-row sm:flex-col sm:bottom-[-490px] lg:bottom-[-390px] xl:bottom-[-220px] 3xl:bottom-[-180px]  justify-between absolute gap-5 py-10 rounded-2xl   left-1/2   md:w-175 sm:w-160 lg:w-210 xl:w-265 2xl:w-320 3xl:w-440 4xl:w-490 transform -translate-x-1/2 bg-[#181834]'>
 
                     {contactInfo.map((element, index) => {
                         return (
