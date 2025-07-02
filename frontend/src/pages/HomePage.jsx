@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Clock, Phone, Mail } from 'lucide-react';
 
 function HomePage() {
     const [currentImage, setCurrentImage] = useState(0);
@@ -21,6 +22,30 @@ function HomePage() {
         }
     ];
 
+    const contactInfo = [
+        {
+            icon: Clock,
+            title: "Opening Hours",
+            one: "Monday - Friday 09.00 - 18.00",
+            two: "Saturday 09.00 - 14.00",
+
+        },
+        {
+            icon: Phone,
+            title: "Call Us Anytime",
+            one: "+61 470 687 907",
+            two: "+61 478 787 671",
+
+        },
+        {
+            icon: Mail,
+            title: "Email Us",
+            one: "info@flymel.com.au"
+
+        }
+    ];
+
+
     const goToImage = (index) => {
         setCurrentImage(index);
     };
@@ -34,7 +59,7 @@ function HomePage() {
             <div className='relative '>
                 {/* Image Display */}
                 <img
-                    className='w-full h-[1280px] object-cover'
+                    className='w-full h-[1100px] object-cover'
                     src={slides[currentImage].image}
                     alt={`Slide ${currentImage + 1}`}
                 />
@@ -81,8 +106,28 @@ function HomePage() {
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                     </svg>
                 </button>
+                <div className='flex lg:flex-row sm:flex-col lg:bottom-[-190px] xl:bottom-[-150px]  justify-between absolute gap-5 py-10 rounded-2xl bottom-[-320px]  left-1/2   md:w-175 sm:w-160 lg:w-210 xl:w-265 2xl:w-320 3xl:w-440 4xl:w-490 transform -translate-x-1/2 bg-[#181834]'>
+
+                    {contactInfo.map((element, index) => {
+                        return (
+                            <div key={index} className='  mx-3'>
+                                <div className='flex flex-row items-center gap-3 ml-3'>
+                                    <div className='flex  '>
+                                        <element.icon className='w-10 h-10 text-white' />
+                                    </div>
+                                    <div className='space-y-5'>
+                                        <h1 className='text-2xl font-bold text-white'>{element.title}</h1>
+                                        <h1 className='text-xl text-gray-400'>{element.one}</h1>
+                                        <h1 className='text-xl text-gray-400'>{element.two}</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                    <button className='text-3xl p-8 mx-6 text-white bg-red-600 min-w-[400px] rounded-2xl'>Buy Cargo Now</button>
+                </div>
             </div>
-            <div className='border mt-10 mb-10 h-900 '></div>
+            <div className='h-200'></div>
         </div>
     )
 }
