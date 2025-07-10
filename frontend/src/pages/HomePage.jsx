@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Clock, Phone, Mail } from 'lucide-react';
+import FreightServices from '../components/FreightServices'; // Import the new component
 
 function HomePage() {
     const [currentImage, setCurrentImage] = useState(0);
@@ -145,6 +146,9 @@ function HomePage() {
                     <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-[#181834]'>Flymel Freight</h1>
                 </div>
             </div>
+
+            {/* Freight Services Section */}
+            <FreightServices />
 
             {/* Additional spacing */}
             <div className='h-32'></div>
