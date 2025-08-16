@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Clock, Phone, Mail } from 'lucide-react';
-import FreightServices from '../components/FreightServices'; // Import the new component
+import FreightServices from '../components/FreightServices';
 import ServicesHomePage from '../components/ServicesHomePage';
+import FleetGallery from '../components/FleetGallery'; // Import the new FleetGallery component
 
 function HomePage() {
     const [currentImage, setCurrentImage] = useState(0);
@@ -224,7 +225,12 @@ function HomePage() {
 
             {/* Freight Services Section */}
             <FreightServices />
+
+            {/* Fleet <FleetGallery /> Gallery Section */}
+
+
             <ServicesHomePage />
+
             {/* Additional spacing */}
             <div className='h-32'></div>
 
