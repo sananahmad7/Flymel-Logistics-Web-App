@@ -7,21 +7,21 @@ function FreightServices() {
             id: 1,
             title: 'LAND FREIGHT',
             icon: Truck,
-            image: '/src/assets/land.jpg', // Replace with your truck image path
+            image: '/land.jpg', // Replace with your truck image path
             description: 'Reliable ground transportation for your cargo'
         },
         {
             id: 2,
             title: 'AIR FREIGHT',
             icon: Plane,
-            image: '/src/assets/air.jpg', // Replace with your plane image path
+            image: '/air.jpg', // Replace with your plane image path
             description: 'Fast air delivery worldwide'
         },
         {
             id: 3,
             title: 'SEA FREIGHT',
             icon: Ship,
-            image: '/src/assets/sea.jpg', // Replace with your ship image path
+            image: '/sea.jpg', // Replace with your ship image path
             description: 'Cost-effective ocean shipping solutions'
         }
     ];

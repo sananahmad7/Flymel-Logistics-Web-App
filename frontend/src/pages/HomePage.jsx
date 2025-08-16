@@ -12,12 +12,12 @@ function HomePage() {
 
     const slides = [
         {
-            image: '../src/assets/Truck.jpg',
+            image: '/Truck.jpg',
             title: 'Ground, Air or Sea',
             subtitle: 'WE DELIVER YOUR PACKAGE IN NO-TIME',
         },
         {
-            image: '../src/assets/ok.jpg',
+            image: '/ok.jpg',
             title: 'Fast, safe and accurate',
             subtitle: 'ANYWHERE IN THIS WORLD',
         }
